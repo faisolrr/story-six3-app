@@ -14,8 +14,6 @@ function HomeCard2() {
   );
 }
 
-export default HomeCard;
-
 function HomeCard(data) {
   return (
     <Card className="shadow-lg shadow-black p-10">
