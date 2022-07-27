@@ -1,4 +1,5 @@
-import HomeCard from "../components/HomeCard";
+import { HomeCard, HomeCard2 } from "../components/HomeCard";
+import Header from "../components/Header";
 
 const HomePage = () => {
   const userDatas = [
@@ -36,7 +37,8 @@ const HomePage = () => {
 
   return (
     <>
-      <div>Header</div>
+      <Header />
+      <HomeCard2 />
       <div className="grid gap-20 mx-5 my-5 md:mx-10 md:my-10 lg:mx-20 lg:my-20 ">
         {userDatas.map((userData) => (
           <HomeCard
