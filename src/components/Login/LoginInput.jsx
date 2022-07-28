@@ -31,13 +31,13 @@ function LoginInput() {
           {...form.getInputProps("password")}
         />
         <LoginButton
-          className="text-blue-400 bg-white hover:text-white hover:bg-blue-400"
+          className="text-[#56BBF1] bg-white hover:text-white hover:bg-[#56BBF1]"
           id="btn-login"
           label="Log in"
         />
-        <h5 className="text-center text-blue-400">Or</h5>
+        <h5 className="text-center text-[#56BBF1]">Or</h5>
         <RegisButton
-          className="text-blue-400 bg-white hover:text-white hover:bg-blue-400"
+          className="text-[#56BBF1] bg-white hover:text-white hover:bg-[#56BBF1]"
           id="btn-signup"
           label="Sign up"
           to="/signup"

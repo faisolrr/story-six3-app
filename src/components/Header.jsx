@@ -12,7 +12,7 @@ function Header() {
   };
 
   return (
-    <div className="border-t-2 shadow-lg py-2 md:py-4">
+    <div className="sticky top-0 bg-white border-t-2 shadow-lg py-2 md:py-4">
       <div className="flex justify-between mx-3 md:mx-4 lg:mx-5 items-center lg:max-w-screen-xl 2xl:mx-auto">
         {/* website icon */}
         <h1 className="font-montserrat text-[#56BBF1] text-lg lg:text-3xl">

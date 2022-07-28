@@ -25,7 +25,7 @@ function Register() {
           { minWidth: "lg", cols: 2 },
         ]}
       >
-        <div className="bg-blue-400 text-white text-center lg:rounded-lg rounded-t-lg ">
+        <div className="bg-[#56BBF1] text-white text-center lg:rounded-lg rounded-t-lg ">
           <h1 className="my-32 font-montserrat italic text-lg sm:text-3xl">
             WELCOME TO
             <div className="mt-11 sm:py-2">
@@ -39,7 +39,7 @@ function Register() {
           </h1>
         </div>
         <div className="my-7 sm:py-2">
-          <h1 className="text-center font-bold text-blue-400 space-x-4 text-2xl">
+          <h1 className="text-center font-bold text-[#56BBF1] space-x-4 text-2xl">
             Creat Account
           </h1>
           <form onSubmit={form.onSubmit(console.log)}>
@@ -67,7 +67,7 @@ function Register() {
                 {...form.getInputProps("password")}
               />
               <LoginButton
-                className="text-blue-400 bg-white hover:text-white hover:bg-blue-400"
+                className="text-[#56BBF1] bg-white hover:text-white hover:bg-[#56BBF1]"
                 id="btn-login"
                 label="Sign up"
               />
