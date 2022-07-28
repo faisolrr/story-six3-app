@@ -18,29 +18,31 @@ function LoginInput() {
   });
   return (
     <form onSubmit={form.onSubmit(console.log)}>
-      <TextInput
-        className="m-5"
-        mt="sm"
-        placeholder="Email"
-        {...form.getInputProps("email")}
-      />
-      <PasswordInput
-        className="m-5"
-        placeholder="Password"
-        {...form.getInputProps("password")}
-      />
-      <LoginButton
-        className="text-blue-400 bg-white hover:text-white hover:bg-blue-400"
-        id="btn-login"
-        label="Log in"
-      />
-      <h5 className="text-center text-blue-400 font-poppins">Or</h5>
-      <RegisButton
-        className="text-blue-400 bg-white hover:text-white hover:bg-blue-400"
-        id="btn-login"
-        label="Sign up"
-        to="/signup"
-      />
+      <div className="mx-5 px-7 sm:px-3">
+        <TextInput
+          className="m-5"
+          mt="sm"
+          placeholder="Email"
+          {...form.getInputProps("email")}
+        />
+        <PasswordInput
+          className="m-5"
+          placeholder="Password"
+          {...form.getInputProps("password")}
+        />
+        <LoginButton
+          className="text-[#56BBF1] bg-white hover:text-white hover:bg-[#56BBF1]"
+          id="btn-login"
+          label="Log in"
+        />
+        <h5 className="text-center text-[#56BBF1]">Or</h5>
+        <RegisButton
+          className="text-[#56BBF1] bg-white hover:text-white hover:bg-[#56BBF1]"
+          id="btn-signup"
+          label="Sign up"
+          to="/signup"
+        />
+      </div>
     </form>
   );
 }
