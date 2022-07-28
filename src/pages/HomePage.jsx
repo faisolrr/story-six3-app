@@ -34,9 +34,9 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="dark:bg-black p-1">
+      <div className="p-1">
         <HomeCard2 />
-        <div className="grid gap-4 md:gap-20 mx-5 my-5 md:mx-10 md:my-10 lg:mx-20 lg:my-20">
+        <div className="grid gap-4 md:gap-6 lg:gap-8 mx-5 my-5 md:my-6 lg:my-8 md:mx-32 lg:mx-44 ">
           {userDatas.map((userData) => (
             <HomeCard
               key={userData.id}
