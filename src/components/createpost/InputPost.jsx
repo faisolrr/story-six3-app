@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Card } from "@mantine/core";
 
 const InputPost = (props) => {
-  const [image, setImage] = useState(undefined);
+  const [selectImage, setSelectImage] = useState(undefined);
   const [inputImge, setInputImage] = useState(false);
 
   // add posting
@@ -13,7 +13,7 @@ const InputPost = (props) => {
   // input image
   const handleImg = (e) => {
     if (e.target.files && e.target.files.length > 0) {
-      setImage(e.target.files[0]);
+      setSelectImage(e.target.files[0]);
       setInputImage(true);
     }
   };
@@ -50,14 +50,16 @@ const InputPost = (props) => {
           </Card.Section>
         </Card>
       ) : (
-        <Card className="shadow-lg shadow-black/40 p-10 -mx-6 mt-2 rounded-xl md:mx-10 md:pb-32">
+        <Card
+          onChange={props.onChange}
+          className="shadow-lg shadow-black/40 p-10 -mx-6 mt-2 rounded-xl md:mx-10 md:pb-32"
+        >
           <Card.Section>
             <input
               className="text-left ring-white font-poppins text-base -mt-7  md:text-lg lg:text-xl outline-transparent"
               placeholder="
           What do you think .... ?"
               required
-              onChange={props.onChange}
             />
             <div className="flex items-center justify-center pb-10 mt-2 md:mt-8">
               <label className="flex flex-col h-32">
@@ -65,7 +67,7 @@ const InputPost = (props) => {
                   <p className="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
                     <img
                       className="h-32 md:h-48 lg:h-56"
-                      src={URL.createObjectURL(image)}
+                      src={URL.createObjectURL(selectImage)}
                     />
                   </p>
                 </div>
