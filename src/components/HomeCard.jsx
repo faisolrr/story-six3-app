@@ -1,5 +1,6 @@
 import { Menu, Card, Text, Group } from "@mantine/core";
-import { Trash } from "tabler-icons-react";
+import { IoTrashOutline } from "react-icons/io5";
+import { AiOutlineEdit } from "react-icons/ai";
 
 import React from "react";
 
@@ -24,10 +25,15 @@ function HomeCard(props) {
           </Text>
 
           <Menu size="xs" className="">
-            <Menu.Item className="font-poppins">Edit</Menu.Item>
+            <Menu.Item
+              icon={<AiOutlineEdit size={14} />}
+              className="font-poppins"
+            >
+              Edit
+            </Menu.Item>
             <Menu.Item
               color="red"
-              icon={<Trash size={14} />}
+              icon={<IoTrashOutline size={14} />}
               className="font-poppins"
             >
               Delete
