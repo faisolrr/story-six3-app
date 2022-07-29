@@ -3,8 +3,9 @@ import ProfilesPage from "../pages/ProfilesPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import CreatePosting from "../pages/CreatePosting";
-import Login from "../pages/Login";
+
 import CommentPage from "../pages/CommentPage";
+import Login from "../pages/auth/Login";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/comment/:id_comment" element={<CommentPage />} />
         <Route path="*" element="page not found" />
         <Route path="/" element={<Login />} to="/signup" />
+        <Route path="/" element={<Login />} to="/" />
+        <Route path="/signup" element={<Login to="/" />} />
       </Routes>
     </BrowserRouter>
   );
