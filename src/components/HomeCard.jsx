@@ -5,13 +5,8 @@ import React from "react";
 
 function HomeCard2() {
   return (
-    <Text
-      color="dimmed"
-      className="rounded-xl grid text-xs md:text-md lg:text-lg justify-center hover:underline font-poppins shadow-lg shadow-black/40 p-2 mx-5 my-5 md:my-5 lg:my-5 md:mx-32 lg:mx-44"
-    >
-      <a href="//" className="">
-        What do you think .... ?
-      </a>
+    <Text className="text-[#6F6F6F] opacity-[0.7] rounded-xl grid text-xs md:text-md lg:text-lg justify-center hover:underline font-poppins shadow-lg shadow-black/40 p-2 mx-5 my-5 md:my-5 lg:my-5 md:mx-32 lg:mx-44">
+      <a href="//">What do you think .... ?</a>
     </Text>
   );
 }
@@ -23,10 +18,7 @@ function HomeCard(props) {
         <Group position="apart">
           <Text className="text-xs md:text-md lg:text-lg font-roboto font-boldd ">
             Username{props.user}
-            <Text
-              color="dimmed"
-              className="text-xs md:text-md lg:text-lg ml-2 inline-block"
-            >
+            <Text className="text-[#6F6F6F] opacity-[0.7] text-xs md:text-md lg:text-lg ml-2 inline-block">
               {props.date}h
             </Text>
           </Text>
@@ -57,13 +49,8 @@ function HomeCard(props) {
             className=" pr-2 pl-4 mt-3"
           />
         </div>
-        <Text
-          color="dimmed"
-          className="pr-2 pl-4 text-xs md:text-md lg:text-lg hover:underline font-poppins"
-        >
-          <a className="" href="//">
-            View {props.comment} all comments...
-          </a>
+        <Text className="text-[#6F6F6F] opacity-[0.7] pr-2 pl-4 text-xs md:text-md lg:text-lg hover:underline font-poppins">
+          <a href="//">View {props.comment} all comments...</a>
         </Text>
       </Card.Section>
     </Card>
