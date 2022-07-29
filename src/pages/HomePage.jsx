@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { HomeCard, HomeCard2 } from "../components/HomeCard";
-import Header from "../components/Header";
+import { useState, useEffect } from "react";
 import axios from "axios";
+
+import Header from "../components/Header";
+import { HomeCard, HomeCard2 } from "../components/HomeCard";
 
 const HomePage = () => {
   const [postDatas, setPostDatas] = useState([]);
@@ -35,9 +36,9 @@ const HomePage = () => {
   return (
     <>
       <Header />
+      <HomeCard2 />
       <div className="p-1">
-        <HomeCard2 />
-        <div className="grid gap-4 md:gap-6 lg:gap-8 mx-5 my-5 md:my-6 lg:my-8 md:mx-32 lg:mx-44 ">
+        <div className="grid gap-4 md:gap-6 lg:gap-8 mx-5 md:my-6 lg:my-8 md:mx-32 lg:mx-44 ">
           {postDatas.map((postData) => (
             <HomeCard
               key={postData.id}
