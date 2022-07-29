@@ -34,13 +34,13 @@ const ProfilesPage = () => {
   return (
     <>
       <Header />
-      <HomeCard2 />
       <ProfilesCard
         key={userDatas.id}
         user={userDatas.username}
         email={userDatas.email}
         // password={userDatas.phone}
       />
+      <HomeCard2 />
     </>
   );
 };
