@@ -57,7 +57,7 @@ function Header() {
             ) : (
               //   if notLogin
               //   card drop down
-              <div className="shadow-sm rounded-xl bg-white shadow-black/40 p-2 absolute right-0 top-6 md:top-7">
+              <div className="shadow-sm rounded-xl bg-white shadow-black/40 p-2 absolute right-0 top-6 md:top-7 z-10">
                 <ul className="font-poppins">
                   {/* button login */}
                   <button className="py-2 px-[9.3rem] rounded-xl text-sm text-white bg-[#56BBF1] md:py-1 md:px-20 lg:px-16">
