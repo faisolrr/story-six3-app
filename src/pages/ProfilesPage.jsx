@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import ProfilesCard from "../components/ProfilesCard";
@@ -40,10 +40,6 @@ const ProfilesPage = () => {
         user={userDatas.username}
         email={userDatas.email}
         // password={userDatas.phone}
-        // date={userDatas.userId}
-        // content={userDatas.body}
-        // picture={userDatas.picture}
-        // comment={userDatas.id}
       />
     </>
   );
