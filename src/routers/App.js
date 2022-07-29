@@ -7,6 +7,9 @@ import CreatePosting from "../pages/CreatePosting";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "../pages/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import HomePage from "../pages/HomePage";
 import CommentPage from "../pages/CommentPage";
 
 function App() {
