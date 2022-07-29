@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import axios from "axios";
 
 const HomePage = () => {
-  const [userDatas, setUserDatas] = useState([]);
+  const [postDatas, setPostDatas] = useState([]);
+  // const [userDatas, setUserDatas] = useState([]);
   // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -17,12 +18,12 @@ const HomePage = () => {
       .get(`https://jsonplaceholder.typicode.com/posts`)
       // .get(`https://myminefield.site/posts`)
       .then((response) => {
-        // console.log(response);
+        console.log(response);
         // console.log(response.data);
         const { data } = response;
-        console.log(data);
+        // console.log(data);
         if (data) {
-          setUserDatas(data);
+          setPostDatas(data);
         }
       })
       .catch((error) => {
@@ -37,14 +38,14 @@ const HomePage = () => {
       <div className="p-1">
         <HomeCard2 />
         <div className="grid gap-4 md:gap-6 lg:gap-8 mx-5 my-5 md:my-6 lg:my-8 md:mx-32 lg:mx-44 ">
-          {userDatas.map((userData) => (
+          {postDatas.map((postData) => (
             <HomeCard
-              key={userData.id}
-              user={userData.id}
-              date={userData.userId}
-              content={userData.body}
-              // picture={userData.picture}
-              comment={userData.id}
+              key={postData.id}
+              user={postData.userId}
+              date={postData.userId}
+              content={postData.body}
+              picture={postData.picture}
+              comment={postData.id}
             />
           ))}
         </div>

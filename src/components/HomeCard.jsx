@@ -1,4 +1,4 @@
-import { Menu, Card, Image, Text, Group } from "@mantine/core";
+import { Menu, Card, Text, Group } from "@mantine/core";
 import { Trash } from "tabler-icons-react";
 
 import React from "react";
@@ -16,18 +16,18 @@ function HomeCard2() {
   );
 }
 
-function HomeCard(data) {
+function HomeCard(props) {
   return (
     <Card className="rounded-xl shadow-lg shadow-black/40 p-7">
       <Card.Section>
         <Group position="apart">
           <Text className="text-xs md:text-md lg:text-lg font-roboto font-boldd ">
-            Username{data.user}
+            Username{props.user}
             <Text
               color="dimmed"
               className="text-xs md:text-md lg:text-lg ml-2 inline-block"
             >
-              {data.date}h
+              {props.date}h
             </Text>
           </Text>
 
@@ -44,16 +44,25 @@ function HomeCard(data) {
         </Group>
 
         <Text className=" pr-2 pl-4 text-xs md:text-md lg:text-lg text-justify font-poppins ">
-          {data.content}
+          {props.content}
         </Text>
-
-        <Image src={data.picture} className="pr-2 pl-4 mt-3" />
+        <div className="flex justify-center">
+          <img
+            src={
+              props.picture
+                ? `https://image.tmdb.org/t/p/w500${props.picture}`
+                : "https://via.placeholder.com/200x300?text=No+Image"
+            }
+            alt={props.user}
+            className=" pr-2 pl-4 mt-3"
+          />
+        </div>
         <Text
           color="dimmed"
           className="pr-2 pl-4 text-xs md:text-md lg:text-lg hover:underline font-poppins"
         >
           <a className="" href="//">
-            View {data.comment} all comments...
+            View {props.comment} all comments...
           </a>
         </Text>
       </Card.Section>
