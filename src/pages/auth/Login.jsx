@@ -1,14 +1,64 @@
-import React from "react";
 import Header from "../../components/Header";
 import { SimpleGrid } from "@mantine/core";
 import LoginInput from "../../components/Login/LoginInput";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      email: "",
+      password: "",
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    axios
+      .post(`https://myminefield.site/login`)
+      .then((res) => {
+        const { data } = res;
+        if (typeof data === "string") {
+          console.log({
+            title: "Login Failed",
+            message: data,
+            color: "red",
+            autoClose: 3000,
+          });
+        } else {
+          console.log({
+            title: "Login Successful",
+            message: "Hey there! Welcome back to Story Six3",
+            color: "green",
+            autoClose: 3000,
+          });
+          navigate("/");
+        }
+      })
+      .catch((err) => {
+        const { message } = err.response.data;
+        console.log({
+          title: "Login Failed",
+          message: message,
+          color: "red",
+          autoClose: 3000,
+        });
+      });
+  };
   return (
     <>
       <Header />
       <SimpleGrid
         className="lg:grid-col lg:mt-11 m-5 shadow-2xl rounded-2xl"
+        onSubmit={(e) => handleSubmit(e)}
         breakpoints={[
           { minWidth: "sm", cols: 1 },
           { minWidth: "lg", cols: 2 },
