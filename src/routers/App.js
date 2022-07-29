@@ -1,11 +1,9 @@
 import HomePage from "../pages/HomePage";
 import ProfilesPage from "../pages/ProfilesPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import CreatePosting from "../pages/CreatePosting";
-
-import CommentPage from "../pages/CommentPage";
 import Login from "../pages/auth/Login";
+import CreatePosting from "../pages/CreatePosting";
+import CommentPage from "../pages/CommentPage";
 
 function App() {
   return (
